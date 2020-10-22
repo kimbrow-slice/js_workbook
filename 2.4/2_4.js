@@ -8,7 +8,7 @@ webDevAdmin = uName;
 
 alert(webDevAdmin);
 
-let myPlanet = "Earth";
+let currentPlanet = "Earth";
 
 let currentGuestName = " Willie ";
 
