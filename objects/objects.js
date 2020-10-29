@@ -54,10 +54,9 @@ let salaries = {
     "Ann": 160,
     "Pete": 130
 }; // giving the keys and values to our object called salaries
-if (isEmpty(salaries)) {
-    var sum = 0; // declaring and assigning the value of 0 to sum by  using the isEmpty function on the Object salaries
-}
 
+var sum = 0;
+// declaring and assigning the value of 0 to sum
 for (let key in salaries) { // we are searching to modify a key in the salaries object
     sum += salaries[key]; // the sum that we assigned to the value 0 earlier we are going to modify with concatination to be the salaries added together
 }
