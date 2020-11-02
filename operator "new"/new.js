@@ -132,7 +132,7 @@ function Calculator() {
 
     this.read = function() {
         this.a = +prompt('#1', 0);
-        this.b = +prompt('#1', 0);
+        this.b = +prompt('#2', 0);
     };
     //this is creating the empty object so if we compare how we put together our calculator in object methods. We can do this the same way except we are going create functions with each portion instead. 
     this.sum = function() {
