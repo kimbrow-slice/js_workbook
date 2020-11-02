@@ -66,11 +66,6 @@ console.log(sum); // logging the sum to get the value of all salaries added toge
 
 
 //TASK 4 ->
-menu = {
-    width: 400,
-    height: 600,
-    title: "My menu"
-};
 
 function multiplyNumeric(menu) {
     for (let key in menu) {
@@ -79,6 +74,14 @@ function multiplyNumeric(menu) {
         }
     }
 }
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+};
+
+multiplyNumeric(menu);
+console.log(menu);
 
 
 /*function myFunctionName(parameter){
