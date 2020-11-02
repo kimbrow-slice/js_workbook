@@ -106,3 +106,64 @@ function SmallUser() {
 }
 
 alert( new SmallUser().name ); // Jeffery
+*/
+
+//TASK 1 ->
+let AB = {};
+//creating an empty object called AB
+
+function A(); { return AB; }
+//function A() returns object AB
+function B(); { return AB; }
+//function B() returns object AB
+
+alert(new A() == new B());
+//because our functions both return the same external object of AB, the alert is true.
+
+
+//TASK 2 ->
+/*let calculator = new Calculator();
+calculator.read();
+
+alert( "Sum=" + calculator.sum() );
+alert( "Mul=" + calculator.mul() );*/
+function Calculator() {
+    //creating a constructor function called Calculator
+
+    this.read = function() {
+        this.a = +prompt('#1', 0);
+        this.b = +prompt('#1', 0);
+    };
+    //this is creating the empty object so if we compare how we put together our calculator in object methods. We can do this the same way except we are going create functions with each portion instead. 
+    this.sum = function() {
+        return this.a + this.b;
+    };
+
+    this.mul = function() {
+        return this.a * this.b;
+    };
+}
+
+let calculator = new Calculator();
+//assigning the value of function new Calculator to the variable calculator
+
+//below is the code we were given
+calculator.read();
+alert("Sum=" + calculator.sum());
+alert("Mul=" + calculator.mul());
+
+//TASK 3 ->
+function Accumulator(startingValue) {
+    this.value = startingValue;
+
+    this.read = function() {
+        this.value += +prompt('How much to add?', 0);
+    };
+
+}
+let accumulator = new Accumulator(1); // initial value 1
+
+accumulator.read(); // adds the user-entered value
+accumulator.read(); // adds the user-entered value
+
+alert(accumulator.value); // shows the sum of these values
