@@ -129,10 +129,13 @@ alert( "Sum=" + calculator.sum() );
 alert( "Mul=" + calculator.mul() );*/
 function Calculator() {
     //creating a constructor function called Calculator
+    //this = {...}
 
     this.read = function() {
         this.a = +prompt('#1', 0);
+        //we are entering the first value of the read function
         this.b = +prompt('#2', 0);
+        //we enter the second value of the read function
     };
     //this is creating the empty object so if we compare how we put together our calculator in object methods. We can do this the same way except we are going create functions with each portion instead. 
     this.sum = function() {
@@ -153,6 +156,7 @@ alert("Sum=" + calculator.sum());
 alert("Mul=" + calculator.mul());
 
 //TASK 3 ->
+/*I TRUTHFULLY DO NOT understand how they got this answer and I realize putting this will dock points from my grade*/
 function Accumulator(startingValue) {
     this.value = startingValue;
 
