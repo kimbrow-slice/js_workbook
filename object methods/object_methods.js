@@ -143,22 +143,35 @@ alert(user.ref.name);
 
 //TASK 2 ->
 
-let calculator = {
-    read() {
-        this.a = +prompt('#1', 0);
-        this.b = +prompt('#2', 0);
-    },
-    sum() {
-        return this.a + this.b;
-    },
-    mul() {
-        return this.a * this.b;
-    }
-};
+function Calculator() { //naming the constructor function
+    //this = {};
+    this.value1 = 0; //first value1
+    this.value2 = 0; //the second value2
 
-calculator.read();
-alert(calculator.sum());
-alert(calculator.mul());
+    this.read = function() { //creating our read function that is nested inside of an object
+        this.value1 = +prompt("Enter the first value", 0);
+        //allowing for a prompt to enter a number 
+        this.value2 = +prompt("Enter the second value", 0);
+        //allowing for a prompt to enter another number 
+    }
+
+    this.sum = function() { //naming the sum function
+        return (this.value1 + this.value2);
+        //return the value of 1 + 2 to equal sum
+    }
+
+    this.mul = function() { // naming the multiplication function
+            return (this.value1 * this.value2);
+        } //returning the value1 * value2 
+
+}
+
+let calculator; // creating calculator variable
+calculator = new Calculator();
+calculator.read(); //the read method
+
+console.log(calculator.sum()); //logging the sum method
+console.log(calculator.mul()); // logging the mul method
 
 // TASK 3 ->
 
